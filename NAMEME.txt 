@@ -1,0 +1,132 @@
+QUESTION 1
+Karel the Robot
+public void run ();
+moveUpRow();
+for (int i = 0; i < 4 i++) {
+handleBorder();
+nextPosition();
+
+private void handleBorder()) {
+while (frontIsClear()) {
+if (noBeeperPresents()) {
+put Beeper;
+}
+move ();
+
+private void moveRowUp() {
+turnLeft();
+move();
+turnRight();
+}
+private void nextPosition () {
+turnRight();
+move();
+turnRight();
+move();
+turnRight();
+
+
+
+
+
+QUESTION (2a) Compute the value of each of the following Java expressions. If an error occurs during any of these evaluations, write ―Error‖ on that line and explain briefly why the error occurs.
+5.0 / 4 - 4 / 5  ANSWER:(1.25)
+7 < 9 - 5 && 3 % 0 == 3 ANSWER: (False)
+"B" + 8 + 4 = ANSWER: (:"B84")
+
+QUESTION (2b) What output is printed by the following program:
+The 1st Number is:78
+The 2nd Number is: 73
+
+PROBLEM 3
+public void run() {
+println("This program finds the two largest integers in a"); println("list. Enter values, one per line, using a "
++ SENTINEL + " to"); println("signal the end of the list.");
+      int largest = -1;
+      int secondLargest = -1;
+      while (true) {
+         int input = readInt(" ? ");
+         if (input == SENTINEL) break;
+         if (input > largest) {
+            secondLargest = largest;
+            largest = input;
+         } else if (input > secondLargest) {
+            secondLargest = input;
+         }
+}
+println("The largest value is " + largest);
+println("The second largest is " + secondLargest); }
+}
+
+PROBLEM 4
+public class SimpleFrogger extends GraphicsProgram {
+   public void run() {
+      frog = new GImage("frog.gif");
+      fx = (NCOLUMNS / 2 + 0.5) * SQUARE_SIZE;
+      fy = (NROWS - 0.5) * SQUARE_SIZE;
+      add(frog, fx - frog.getWidth() / 2,
+                   fy - frog.getHeight() / 2);
+      addMouseListeners();
+}
+/* Responds to a mouse click */
+   public void mouseClicked(MouseEvent e) {
+      double mx = e.getX();
+      double my = e.getY();
+      if (Math.abs(mx - fx) > Math.abs(my - fy)) {
+         if (mx > fx) {
+            moveFrog(SQUARE_SIZE, 0);
+         } else {
+            moveFrog(-SQUARE_SIZE, 0);
+}
+} else {
+         if (my > fy) {
+            moveFrog(0, SQUARE_SIZE);
+         } else {
+            moveFrog(0, -SQUARE_SIZE);
+} }
+}
+}
+the frog by dx/dy as long as it remains inside the world */
+/* Moves
+private void moveFrog(double dx, double dy) {
+if (insideFroggerWorld(fx + dx, fy + dy)) {
+   fx += dx;
+fy += dy;
+   frog.move(dx, dy);
+}
+/* Returns true if the point (x, y) is inside the frog's world */ private boolean insideFroggerWorld(double x, double y) {
+      return (x >= 0 && x <= NCOLUMNS * SQUARE_SIZE &&
+              y >= 0 && y <= NROWS * SQUARE_SIZE);
+}
+/* Private constants */
+   private static final int SQUARE_SIZE = 75;
+   private static final int NROWS = 4;
+   private static final int NCOLUMNS = 7;
+/* Private instance variables */
+private GImage frog;
+private double fx;
+private double fy;
+/* The image of the frog */
+/* The x-coordinate of the frog's center */
+/* The y-coordinate of the frog's center */
+/* Sets the graphics window size */
+public static final int APPLICATION_WIDTH = NCOLUMNS * SQUARE_SIZE; public static final int APPLICATION_HEIGHT = NROWS * SQUARE_SIZE;
+}
+
+
+PROBLEM 5
+/*
+ * Removes any doubled letters from a string.
+ */
+private String removeDoubledLetters(String str) { String result = "";
+for (int i = 0; i < str.length(); i++) {
+char ch = str.charAt(i);
+if (i == 0 || ch != str.charAt(i - 1)) {
+            result += ch;
+         }
+}
+      return result;
+   }
+
+
+
